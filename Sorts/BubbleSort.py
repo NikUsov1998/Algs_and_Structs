@@ -1,11 +1,11 @@
-def BubbleSort(list):
-    sorted_index = len(list)
+def bubble_sort(seq):
+    sorted_index = len(seq)
     while True:
-        numberOfSwap = 0
+        num_of_swap = 0
         for i in range(0, sorted_index-1):
-            if list[i] > list[i+1]:
-                list[i], list[i+1] = list[i+1], list[i]
-                numberOfSwap+=1
+            if seq[i] > list[i+1]:
+                seq[i], list[i+1] = list[i+1], list[i]
+                num_of_swap+=1
         sorted_index-=1
-        if numberOfSwap==0:
+        if num_of_swap==0:
             break
