@@ -1,7 +1,7 @@
-def gnome_sort(seq):
-    index = 1
-    i = 0
-    n = len(seq)
+def gnome_sort(seq: list) -> None:
+    index: int = 1
+    i: int = 0
+    n: int = len(seq)
     while i < n-1:
         if seq[i] <= seq[i+1]:
             i, index = index, index + 1

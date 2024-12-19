@@ -18,7 +18,7 @@ def merge(seq, support, ls, le, rs, re):
             r+=1
 
 
-def merge_sort(seq, support=None, start_index=None, stop_index=None):
+def merge_sort(seq: list, support=None, start_index=None, stop_index=None):
     if support is None:
         support=seq[::]
     if stop_index is None:

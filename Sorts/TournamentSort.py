@@ -3,7 +3,7 @@ class BinaryHeap:
         self.elements=[]
         self.size=0
 
-    def shift_up(self, i):
+    def shift_up(self, i) -> None:
         while i>0:
             j=(i-1)//2
             if self.elements[i] < self.elements[j]:
@@ -12,7 +12,7 @@ class BinaryHeap:
                 break
             i=j
 
-    def shift_down(self, i):
+    def shift_down(self, i) -> None:
         n = len(self.elements)
         while True:
             left_j = 2*i+1
@@ -28,7 +28,7 @@ class BinaryHeap:
             else:
                 break
 
-    def add(self, element):
+    def add(self, element) -> None:
         self.elements.append(element)
         i = len(self.elements) - 1
         self.shift_up(i)
@@ -65,7 +65,7 @@ class BinaryHeap:
         self.elements=[]
         self.size=0
 
-def merge_list(list1, list2):
+def merge_list(list1: list, list2: list) -> list[int]:
     result = []
     i = 0
     j = 0
@@ -92,26 +92,6 @@ def tournament_sort(seq):
     heap = BinaryHeap()
     winners = []
     losers = []
-    #while True:
-    #    for element in seq:
-    #        if heap.size <= MAX_HEAP_SIZE:
-    #            heap.add(element)
-    #        else:
-    #            if element < heap.get_root_element():
-    #                losers.append(element)
-    #            else:
-    #                winners.append(heap.insert_and_extract(element))
-    #        while heap.size > 0:
-    #            winners.append(heap.extract())
-
-    #        if len(losers) == 0:
-    #            seq[:] = winners
-    #            return
-    #        else:
-    #            seq[0:len(losers)] = losers
-    #            seq[len(losers):] = winners
-    #            losers.clear()
-    #            winners.clear()
     for element in seq:
         if heap.size <= MAX_HEAP_SIZE:
             heap.add(element)
@@ -124,7 +104,8 @@ def tournament_sort(seq):
     while heap.size > 0:
         winners.append(heap.extract())
     if len(losers) == 0:
-        return winners
+        seq[:] = winners
+        return seq
     losers = tournament_sort(losers)
     seq[:] = merge_list(losers, winners)
     return seq
