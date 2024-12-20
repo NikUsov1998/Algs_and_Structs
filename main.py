@@ -1,3 +1,4 @@
+from Geometry.CircleIntersection import intersection_of_circles
 from Geometry.PointInCircle import  point_in_circle
 from Geometry.PointInTriangle import hitting_the_triangle
 from Geometry.SegmentsIntersection import check_segment_intersection
@@ -71,3 +72,33 @@ if __name__ == '__main__':
         segment2: Segment = Segment(c,d)
 
         print(check_segment_intersection(segment1, segment2))
+
+        a:Point = Point(4,3)
+        r1: int = 2
+        circle1: Circle = Circle(a, r1)
+
+        b:Point = Point(7,5)
+        r2:float = 3
+        circle2: Circle = Circle(b, r2)
+
+        print(intersection_of_circles(circle1, circle2))
+
+        a:Point = Point(4,3)
+        r1: int = 2
+        circle1: Circle = Circle(a, r1)
+
+        b:Point = Point(9,6)
+        r2:float = 3
+        circle2: Circle = Circle(b, r2)
+
+        print(intersection_of_circles(circle1, circle2))
+
+        a:Point = Point(4,3)
+        r1: int = 2
+        circle1: Circle = Circle(a, r1)
+
+        b:Point = Point(4,4)
+        r2:float = 3.2
+        circle2: Circle = Circle(b, r2)
+
+        print(intersection_of_circles(circle1, circle2))

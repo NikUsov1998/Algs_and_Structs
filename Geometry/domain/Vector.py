@@ -1,5 +1,3 @@
-from abc import abstractmethod
-
 from Geometry.domain.Point import Point
 from typing import Self
 
