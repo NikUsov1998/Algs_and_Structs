@@ -1,4 +1,11 @@
-from Geometry.PointInCircle import Point, Circle, point_in_circle
+from Geometry.PointInCircle import  point_in_circle
+from Geometry.PointInTriangle import hitting_the_triangle
+
+from Geometry.domain.Triangle import Triangle
+from Geometry.domain.Point import Point
+from Geometry.domain.Circle import Circle
+from Geometry.domain.Vector import Vector
+
 from Sorts.TournamentSort import tournament_sort
 from Sorts.MergeSort  import merge_sort
 from Sorts.BubbleSort import bubble_sort
@@ -33,3 +40,12 @@ if __name__ == '__main__':
 
         print(point_in_circle(circle=circle, point=point1))
         print(point_in_circle(circle=circle, point=point2))
+
+        a: Point = Point(3,1)
+        b: Point = Point(5,5)
+        c: Point = Point(8,2)
+        triangle: Triangle = Triangle(a,b,c)
+
+        o: Point = Point(7,3)
+
+        print(hitting_the_triangle(point=o, triangle=triangle))
