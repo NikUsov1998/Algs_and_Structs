@@ -1,5 +1,7 @@
 from Geometry.PointInCircle import  point_in_circle
 from Geometry.PointInTriangle import hitting_the_triangle
+from Geometry.SegmentsIntersection import check_segment_intersection
+from Geometry.domain.Segment import Segment
 
 from Geometry.domain.Triangle import Triangle
 from Geometry.domain.Point import Point
@@ -49,3 +51,23 @@ if __name__ == '__main__':
         o: Point = Point(7,3)
 
         print(hitting_the_triangle(point=o, triangle=triangle))
+
+        a: Point = Point(1,2)
+        b: Point = Point(3,1)
+        c: Point = Point(1,1)
+        d: Point = Point(4,3)
+
+        segment1: Segment = Segment(a,b)
+        segment2: Segment = Segment(c,d)
+
+        print(check_segment_intersection(segment1, segment2))
+
+        a: Point = Point(1,2)
+        b: Point = Point(3,3)
+        c: Point = Point(1,1)
+        d: Point = Point(4,3)
+
+        segment1: Segment = Segment(a,b)
+        segment2: Segment = Segment(c,d)
+
+        print(check_segment_intersection(segment1, segment2))

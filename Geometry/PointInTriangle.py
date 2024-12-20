@@ -7,9 +7,9 @@ def vector_cross_product(vector1: Vector, vector2: Vector) -> float:
     return vector1.x_component * vector2.y_component - vector2.x_component * vector1.y_component
 
 def hitting_the_triangle(point: Point, triangle: Triangle) -> bool:
-    vertex_1: float = triangle.vertex1
-    vertex_2: float = triangle.vertex2
-    vertex_3: float = triangle.vertex3
+    vertex_1: Point = triangle.vertex1
+    vertex_2: Point = triangle.vertex2
+    vertex_3: Point = triangle.vertex3
 
     vector1: Vector = Vector(vertex_1, point)
     vector2: Vector = Vector(vertex_2, point)
