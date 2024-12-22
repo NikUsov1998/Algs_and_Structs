@@ -1,4 +1,5 @@
 from Geometry.CircleIntersection import intersection_of_circles
+from Geometry.GaussFormula import calculate_square
 from Geometry.PointInCircle import  point_in_circle
 from Geometry.PointInTriangle import hitting_the_triangle
 from Geometry.SegmentsIntersection import check_segment_intersection
@@ -16,6 +17,11 @@ from Sorts.SelectSort import select_sort
 from Sorts.GnomeSort  import gnome_sort
 
 import Geometry.PointInCircle
+
+
+def main() -> int:
+
+        return 0
 
 if __name__ == '__main__':
         list_1 = [5, 0, -2, 7, 3]
@@ -35,70 +41,6 @@ if __name__ == '__main__':
         tournament_sort(tournament_list)
         print(tournament_list)
 
-        point_center: Point = Point(x=6, y=4)
-        circle: Circle = Circle(point_center=point_center, radius=3)
 
-        point1: Point = Point(x=8, y=3)
-        point2: Point = Point(x=8, y=1)
 
-        print(point_in_circle(circle=circle, point=point1))
-        print(point_in_circle(circle=circle, point=point2))
 
-        a: Point = Point(3,1)
-        b: Point = Point(5,5)
-        c: Point = Point(8,2)
-        triangle: Triangle = Triangle(a,b,c)
-
-        o: Point = Point(7,3)
-
-        print(hitting_the_triangle(point=o, triangle=triangle))
-
-        a: Point = Point(1,2)
-        b: Point = Point(3,1)
-        c: Point = Point(1,1)
-        d: Point = Point(4,3)
-
-        segment1: Segment = Segment(a,b)
-        segment2: Segment = Segment(c,d)
-
-        print(check_segment_intersection(segment1, segment2))
-
-        a: Point = Point(1,2)
-        b: Point = Point(3,3)
-        c: Point = Point(1,1)
-        d: Point = Point(4,3)
-
-        segment1: Segment = Segment(a,b)
-        segment2: Segment = Segment(c,d)
-
-        print(check_segment_intersection(segment1, segment2))
-
-        a:Point = Point(4,3)
-        r1: int = 2
-        circle1: Circle = Circle(a, r1)
-
-        b:Point = Point(7,5)
-        r2:float = 3
-        circle2: Circle = Circle(b, r2)
-
-        print(intersection_of_circles(circle1, circle2))
-
-        a:Point = Point(4,3)
-        r1: int = 2
-        circle1: Circle = Circle(a, r1)
-
-        b:Point = Point(9,6)
-        r2:float = 3
-        circle2: Circle = Circle(b, r2)
-
-        print(intersection_of_circles(circle1, circle2))
-
-        a:Point = Point(4,3)
-        r1: int = 2
-        circle1: Circle = Circle(a, r1)
-
-        b:Point = Point(4,4)
-        r2:float = 3.2
-        circle2: Circle = Circle(b, r2)
-
-        print(intersection_of_circles(circle1, circle2))
