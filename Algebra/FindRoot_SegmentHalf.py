@@ -25,3 +25,10 @@ def test_frsh():
     err = 0.1
     root = find_root_segment_half(F, a, b, err)
     assert root == -0.75
+
+def test_frsh_higher_accuracy():
+    a = -1
+    b = 1
+    err = 0.0001
+    root = find_root_segment_half(F, a, b, err)
+    assert root == -0.7034912109375
