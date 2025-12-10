@@ -8,7 +8,7 @@ def derivative_calculation_2(f: Callable, x: float, delta_x: float) -> float:
     # result: float = (first - second) / third
     return (f(x+delta_x) - f(x-delta_x))/(2*delta_x)
 
-def derivative_calculation_5(f: Callable, x: float, delta_x: float) -> float:
+def derivative_calculation_5(func: Callable, x: float, delta_x: float) -> float:
     # first: float = f(x - 2 * delta_x)
     # second: float = 8 * f(x - delta_x)
     # third: float = 8 * f(x + delta_x)
@@ -16,7 +16,7 @@ def derivative_calculation_5(f: Callable, x: float, delta_x: float) -> float:
     # fifth: float = (12*delta_x)
     # result: float = (first - second + third - forth)/fifth
     # return result
-    return (f(x - 2 * delta_x) - (8 * f(x - delta_x)) + (8 * f(x + delta_x)) - f(x + 2 * delta_x))/(12*delta_x)
+    return (func(x - 2 * delta_x) - (8 * func(x - delta_x)) + (8 * func(x + delta_x)) - func(x + 2 * delta_x))/(12 * delta_x)
 
 def f(x:float): return x**2 - math.exp(x)
 
