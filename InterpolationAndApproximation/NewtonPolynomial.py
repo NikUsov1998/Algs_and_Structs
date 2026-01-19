@@ -1,4 +1,4 @@
-def divided_defferences(x_values, y_values, k):
+def divided_differences(x_values, y_values, k):
     result = 0
     for j in range(k + 1):
         mul = 1
@@ -11,7 +11,7 @@ def divided_defferences(x_values, y_values, k):
 def create_Newton_polynomial(x_values, y_values):
     div_diff = []
     for i in range(1, len(x_values)):
-        div_diff.append(divided_defferences(x_values, y_values, i))
+        div_diff.append(divided_differences(x_values, y_values, i))
     def newton_polynomial(x):
         result = y_values[0]
         for k in range(1, len(y_values)):
@@ -30,4 +30,3 @@ def test_newton_polynomial():
     print('\n')
     for x in x_values:
         print("x = {:.4f}\t y = {:4f}".format(x, new_pol(x)))
-
